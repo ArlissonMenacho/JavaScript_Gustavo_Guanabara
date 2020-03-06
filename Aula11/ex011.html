@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 09 - em JS</title>
+</head>
+<body>
+    <h1>Consulta De Nascionalidade</h1>
+    Informe o país onde você nasceu: <input type="text" name="txtPaisNasc" id="txtPaisNasc">
+    <input type="button" value="Confirmar"> <br>
+    Informe o país onde você está atualmente: <input type="text" name="txtPaisAtual" id="txtPaisAtual">
+    <input type="button" value="Confirmar" onclick="conferir()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function conferir(){
+            var txtPaisNasc = window.document.getElementById("txtPaisNasc")
+            var paisAtual = window.document.getElementById("txtPaisAtual")
+            var res = window.document.getElementById("res")
+            if(txtPaisNasc == paisAtual){
+            res.innerHTML+=`Você está morando no seu pais!`
+            }
+            else{
+                res.innerHTML+= `Você está morando forá do seu pais, você é um estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
